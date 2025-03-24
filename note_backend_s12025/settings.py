@@ -76,23 +76,23 @@ WSGI_APPLICATION = "note_backend_s12025.wsgi.app"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "neondb",
-        "USER": "neondb_owner",
-        "PASSWORD": "npg_kIKSNfC1c7LP",
-        "HOST": "ep-snowy-morning-a7byd66z-pooler.ap-southeast-2.aws.neon.tech",
-        "PORT": "5432",
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "neondb",
+#         "USER": "neondb_owner",
+#         "PASSWORD": "npg_kIKSNfC1c7LP",
+#         "HOST": "ep-snowy-morning-a7byd66z-pooler.ap-southeast-2.aws.neon.tech",
+#         "PORT": "5432",
+#     }
+# }
 
 if os.getenv('DJANGO_TEST_ENV'):
     DATABASES['default'] = {
